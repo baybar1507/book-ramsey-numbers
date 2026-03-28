@@ -65,7 +65,7 @@ The new values contributed by this construction (not already found via SA or cov
 | 32 | 63 | 127 | SA | m = 63 = 9 x 7 |
 | 33 | 65 | 131 | SA | m = 65 = 5 x 13 |
 | 34 | 67 | 135 | SA | m = 67 prime |
-| 35 | 69 | 139 | SA + Algebraic | q = 139 prime, 139 = 3 mod 8 |
+| 35 | 69 | 139 | Algebraic | q = 139 prime, 139 = 3 mod 8 |
 | 53 | 105 | 211 | Algebraic | q = 211 prime, 211 = 3 mod 8 |
 | 71 | 141 | 283 | Algebraic | q = 283 prime, 283 = 3 mod 8 |
 | 77 | 153 | 307 | Algebraic | q = 307 prime, 307 = 3 mod 8 |
