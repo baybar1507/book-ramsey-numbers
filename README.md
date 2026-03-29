@@ -2,7 +2,11 @@
 
 ## Summary
 
-We prove that R(B_{n-1}, B_n) = 4n - 1 for all n up to 35, and for the additional values n = 53, 71, 77, 83, 95. This extends the results of Wesley (2024), who established R(B_{n-1}, B_n) = 4n - 1 for n <= 21 and for an infinite family of n where 2n - 1 is a prime power congruent to 1 mod 4.
+We present verified computational witnesses showing R(B_{n-1}, B_n) = 4n - 1 for all n up to 34 (via simulated annealing), and for n = 35, 53, 71, 77, 83, 95, 105, 111, 123, 125, 131, 137, 143 (via an algebraic construction). We also verify the construction for the prime power case q = 11^3 = 1331, giving n = 333.
+
+**Current proof draft:** If q = 4n - 1 is a prime power with q = 3 (mod 8), then R(B_{n-1}, B_n) = 4n - 1. This draft has been computationally checked and internally reviewed, but external verification is still pending.
+
+This extends the results of Wesley (2024), who established R(B_{n-1}, B_n) = 4n - 1 for n <= 21 and for an infinite family of n where 2n - 1 is a prime power congruent to 1 mod 4.
 
 ## Background
 
@@ -76,11 +80,13 @@ All results have been independently verified by exhaustive computation of co-deg
 
 ## Files
 
-- `proof.md` - Complete proof that the algebraic construction yields valid witnesses for all q = 4n-1 prime with q = 3 mod 8
-- `construct.py` - Algebraic construction: computes D11, D12, D22 for eligible n and verifies the witness
+- `proof.md` - Current proof draft for the prime case (q = 4n-1 prime, q = 3 mod 8). Internally reviewed and computationally checked; external verification pending.
+- `prime_power_extension.md` - Extension of the proof to prime powers (q = p^k with q = 3 mod 8). Computationally verified for q = 27, 1331.
+- `construct.py` - Algebraic construction for the prime case
+- `construct_prime_power.py` - Algebraic construction for the prime power case (requires `galois` package)
 - `search.py` - Simulated annealing search with parallelism for finding witnesses computationally
 - `verify.py` - Independent verification by exhaustive co-degree computation
-- `results.json` - All witness data (difference sets D11, D12, D22 for each n)
+- `results.json` - All witness data (difference sets D11, D12, D22 for 25 values of n)
 - `adjacency_strings.json` - Adjacency strings (upper triangle) for all witness graphs
 
 ## Verification
